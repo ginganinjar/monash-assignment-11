@@ -66,6 +66,7 @@ app.post("/api/characters", function(req, res) {
   res.json(newCharacter);
 });
 
+
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
