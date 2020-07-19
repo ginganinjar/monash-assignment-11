@@ -1,65 +1,80 @@
-# Unit 11: Express
+# Unit 11 Express Homework: Note Taker
 
-## Overview
+## Description
 
-In this unit, we will create our own server-side APIs using the Express.js framework. Express is the most widely used Node.js server framework. It will allow us to quickly and easily establish our API routes and associated HTTP request methods.
+Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
-Routing is how we design our server to handle responses when a client makes a request at a specific endpoint, or URL. We learned how to make GET requests from the client-side in a previous unit. Now we will learn how those requests are handled on the server-side. Our server will _listen_ for a specific type of request at a specific endpoint and when it _hears_ that request, it will respond accordingly.
+* The application frontend has already been created, it's your job to build the backend and connect the two.
 
-We will also learn the HTTP POST request method to submit data to our server.
+* The following HTML routes should be created:
 
-## Key Topics
+  * GET `/notes` - Should return the `notes.html` file.
 
-* http
+  * GET `*` - Should return the `index.html` file
 
-* Express.js
+* The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
 
-* Routing
+* The following API routes should be created:
 
-* Postman
+  * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
 
-* HTTP POST requests
+  * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
 
-* Express.static()
+  * DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
 
-## Comprehension Check
+## User Story
 
-You will be employer-ready if you can answer the following questions:
+AS A user, I want to be able to write and save notes
 
-1. What is routing?
+I WANT to be able to delete notes I've written before
 
-2. How does the request-response pattern work?
+SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
-3. What is sent when a client makes a POST request?
+## Business Context
 
-## Learning Objectives
+For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
 
-You will be employer-competitive if you are able to:
+## Acceptance Criteria
 
-* Configure an Express.js app to handle GET and POST requests
+Application should allow users to create and save notes.
 
-* Configure an Express.js app to serve static files
+Application should allow users to view previously saved notes.
 
-* Identify how client-side requests relate to server-side responses
+Application should allow users to delete previously saved notes.
 
-* Parse optional and required parameters when creating server-side routes
+## Deploying the App
 
-* Implement client-side POST requests to submit form data to a server
+You will not be able to deploy your server side code on GitHub pages. This app should be deployed on Heroku. Carefully follow the [Heroku Guide](../04-Supplemental/HerokuGuide.md) for getting your app deployed on Heroku.
 
-* Explain and configure middleware to extend the functionality of Express.js
+- - -
 
-## Homework: Note Taker
+## Commit Early and Often
 
+One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
 
+* Your commit history is a signal to employers that you are actively working on projects and learning new skills.
 
-## Heads Up
+* Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
 
-* Starting this unit, you will use Heroku to host your web applications! Be sure to sign up for a [Heroku account](https://signup.heroku.com/) and have the Heroku CLI installed on your computer **before** attending your classes. You can follow these [installation instructions](./04-Supplemental/heroku-install.md). 
+Follow these guidelines for committing:
 
-* In the next unit, you will begin to use MySQL. Be sure to have the MySQL Server and Workbench installed on your computer and be able to initialize the MySQL Shell **before** starting Unit 12 and attending your classes. You can follow these installation instructions for your [Mac](./04-Supplemental/mysql-mac-guide.md) or [Windows](./04-Supplemental/mysql-windows-guide.md) computers.
+* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
 
-## Helpful Links
+* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
 
-* [Express.js](https://expressjs.com/)
+* Don't commit half-done work, for the sake of your collaborators (and your future self!).
 
-* [Postman](https://www.getpostman.com/)
+* Test your application before you commit to ensure functionality at every step in the development process.
+
+We would like you to have well over 200 commits by graduation, so commit early and often!
+
+## Submission on BCS
+
+You are required to submit the following:
+
+* The URL of the deployed application. This should be the link to the url provided by Heroku. Be sure not to submit a link to the Heroku dashboard.
+
+* The URL of the GitHub repository
+
+- - -
+© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
