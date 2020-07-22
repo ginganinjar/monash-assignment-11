@@ -9,13 +9,12 @@ const fs = require("fs");
 // creating an "express" server
 const app = express();
 // Sets an Initial port for listeners
-const PORT = process.env.PORT || 9001;
+const PORT = process.env.PORT || 3000;
 
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = 3000;
+
 
 let notesData = [];
 
@@ -110,7 +109,7 @@ app.delete("/api/notes/:id", function(req, res) {
 
 // Web page when the Get started button is clicked
 app.get("/notes", function(req, res) {
-  res.sendFile(path.join(__dirname, "."));
+  res.sendFile(path.join(__dirname, "./notes.html"));
 });
 
 // If no matching route is found default to home
