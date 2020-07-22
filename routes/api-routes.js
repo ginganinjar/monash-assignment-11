@@ -74,21 +74,26 @@ app.get("/api/notes", async function(err, res) {
 //     res.json("delete done");
 //   });
 
-  app.delete("/api/notes/:id", async function(req, res) {
-
-    notesData = await readTemplate("./db/db.json", "utf8");
-    notesData = await JSON.parse(notesData);
-      // delete the old note from the array on note objects
-      notesData = await notesData.filter(function(note) {
+app.delete("/api/notes/:id", async function(req, res) {
+    try {
+      notesData = fs.readFileSync("./db/db.json", "utf8");
+     
+      // if notes data is empty then set '[]' as default value
+      notesData = JSON.parse(notesData || '[]');
+  
+      notesData = notesData.filter(function(note) {
         return note.id != req.params.id;
       });
-      notesData = await JSON.stringify(notesData);
-      // write the new notes to the file
-      await fs.writeFile("./db/db.json", notesData, "utf8", function(err) {
-        // error handling
+   
+      fs.writeFile("./db/db.json", JSON.stringify(notesData), "utf8", function(err) {
         if (err) throw err;
+  
+        res.send(notesData);
       });
-      res.send(JSON.parse(await notesData));
-
+    } catch (err) {
+      console.log(err);
+  
+      throw err;
+    }
   });
 }
