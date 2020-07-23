@@ -68,8 +68,7 @@ app.delete("/api/notes/:id", async function(req, res) {
     try {
     
 
-       
-     
+    
       // if notes data is empty then set '[]' as default value
       //notesData = JSON.parse(notesData || '[]');
       notesData = JSON.parse(notesData);
