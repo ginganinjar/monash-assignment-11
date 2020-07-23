@@ -30,8 +30,8 @@ Monash assignment : 10
 </p>
 
 ## :package: Repositry
-[<repo>](https://github.com/ginganinjar/monash-assignment-11)
-[<live>](https://mysterious-shore-93328.herokuapp.com/notes)
+Live : https://github.com/ginganinjar/monash-assignment-11
+Repo : https://mysterious-shore-93328.herokuapp.com/notes
 
 ## 📝 Table of Contents
 - [About](#about)
