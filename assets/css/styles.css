@@ -32,6 +32,8 @@ html, body {
   height: 50px;
   margin-top: 13px;
   font-size: 3rem;
+  padding : 0;
+  line-height : 1;
 }
 
 .note-title:read-only, .note-textarea:read-only {

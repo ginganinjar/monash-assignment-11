@@ -1,80 +1,97 @@
-# Unit 11 Express Homework: Note Taker
+<h1 align="center">Welcome to Assignmengt 11- Note taker 👋</h1>
 
-## Description
+  <p align="center">
+  <a href="https://mysterious-shore-93328.herokuapp.com/notes" rel="noopener">
+ <img width=200px height=200px src="./siteimg.jpeg" alt="Assignmengt 11- Note taker logo"></a>
+</p>
 
-Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
-* The application frontend has already been created, it's your job to build the backend and connect the two.
+<div align="center">
 
-* The following HTML routes should be created:
+  [![GitHub issues](https://img.shields.io/github/followers/ginganinjar?label=Follow)](/issues)
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]()  
+  [![GitHub issues](https://img.shields.io/github/issues/ginganinjar/note-taker)](/issues)
+  [![GitHub Pull Requests](	https://img.shields.io/github/issues-pr/ginganinjar/note-taker)]()
+  [![GitHub Forks](	https://img.shields.io/github/forks/ginganinjar/note-taker?label=Fork)]()
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 
-  * GET `/notes` - Should return the `notes.html` file.
+</div>
 
-  * GET `*` - Should return the `index.html` file
+---
 
-* The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
+<p align="center"> This application was mostly completed with all front end JS already working. The task here was to develop and build the back end functionality including the code for all routes and get/post requests.
 
-* The following API routes should be created:
+I did also find a couple of minor issues with the CSS realting to the use of this application in mobile and corrected. I found the size of the rubbish bin slightly too small and would have liked to increase margins to improve functionality but did not want to overstep boundries.
+Monash assignment : 10
 
-  * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
 
-  * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
 
-  * DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+ 
+</p>
 
-## User Story
+## :package: Repositry
+<repositry>
 
-AS A user, I want to be able to write and save notes
+## 📝 Table of Contents
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Instalation](#deployment)
+- [Dependancies](#dependancies)
+- [Usage](#usage)
+- [License](#license)
+- [Authors](#contributing)
+- [Acknowledgments](#acknowledgement)
+- [Questions](#questions)
 
-I WANT to be able to delete notes I've written before
+## 🧐 Usage <a name = "about"></a>
+Note Taker - Assignment 11
 
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
+## 🏁 Getting Started <a name = "getting_started"></a>
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-## Business Context
+### Installing & 🚀 Deployment <a name = "deployment"></a>
 
-For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
+```sh
+Clone the repo 
 
-## Acceptance Criteria
+GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from your console.   
 
-Application should allow users to create and save notes.
+Install NPM packages
 
-Application should allow users to view previously saved notes.
+npm i
 
-Application should allow users to delete previously saved notes.
+npm run watch
+ 
+ - primarily executable : server.js
+```
+## :heavy_plus_sign: Dependancies  <a name = "dependancies"></a>
+{
+ 
+ "express": "^4.17.1",
+ 
+ "fetch": "^1.1.0",
+ 
+ "nodemon": "^2.0.4",
+ 
+ "uuid": "^8.2.0"
+}
 
-## Deploying the App
+## :mag: Testing  <a name = "built_using"></a>
+echo "Error: no test specified" && exit 1
 
-You will not be able to deploy your server side code on GitHub pages. This app should be deployed on Heroku. Carefully follow the [Heroku Guide](../04-Supplemental/HerokuGuide.md) for getting your app deployed on Heroku.
+## ✍️ Authors <a name = "contributing"></a>
+David. S
 
-- - -
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+None
 
-## Commit Early and Often
+### :copyright: License <a name = "license"></a>
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+[License](https://opensource.org/licenses/mit-license.php)
 
-* Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+## :question: Questions <a name = "<questions"></a>
+Questions, concers, comments ? 
 
-* Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+Please feel free to contact me at : https://ginganinjar.github.io/contact.html
 
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL of the deployed application. This should be the link to the url provided by Heroku. Be sure not to submit a link to the Heroku dashboard.
-
-* The URL of the GitHub repository
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+Looking forward to hearing from you.
