@@ -55,7 +55,7 @@ These instructions will get you a copy of the project up and running on your loc
 ```sh
 Clone the repo 
 
-GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from your console.   
+GIT CLONE git@github.com:ginganinjar/monash-assignment-11.git from your console.   
 
 Install NPM packages
 
